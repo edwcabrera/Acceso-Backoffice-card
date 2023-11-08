@@ -66,6 +66,7 @@ input{
             text-align: center;
             text-transform: uppercase;
         }
+
 button{
     margin-top: 2rem;
     background-color: #ff7700;
@@ -77,7 +78,10 @@ button{
             width: 80%;
             max-width: 800px;
             border-radius: 1em;
-            background: linear-gradient(108deg, #17A985 -16.56%, #0A87A1 29.21%, #03448C 99.07%);
+            background-image: url(./Bg2.png);
+            background-position: center;
+            background-size: cover;
+           /*  background: linear-gradient(108deg, #17A985 -16.56%, #0A87A1 29.21%, #03448C 99.07%); */
             display: flex;
             flex-direction: column;
             padding: 3em 1.5em;
@@ -96,6 +100,7 @@ button{
             display: flex;
             flex-direction: column;
             align-items: flex-start;
+            gap: 1rem;
         }
 
         .user {
@@ -118,6 +123,26 @@ button{
         .user_clave {
             font-size: 1em;
             text-align: left;
+        }
+
+        .logo{
+            width: 90%;
+            display: inline-flex;
+            align-items: baseline;
+            justify-content: space-between;
+            position: absolute;
+            bottom: 35px;
+
+        }
+
+        .logo span{
+            background-image: url(./Logo.png);
+            display: block;
+            width: 75px;
+            height: 75px;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
         }
 
         /* Media Query para tablets (768px - 1023px) */
@@ -176,7 +201,7 @@ button{
                     <div class="user">
                         <div class="user_title">
                             <form id="userForm">
-                                <label for="usuario">Usuario:</label>
+                                <label for="usuario"><STrong>Usuario:</STrong></label>
                                 <input type="text" id="usuario" name="usuario" value="el Usuario">
                             </form>
                         </div>
@@ -184,7 +209,7 @@ button{
                     <div class="clave">
                         <div class="user_clave">
                             <form id="claveForm">
-                                <label for="clave">Contraseña:</label>
+                                <label for="clave"><strong>Contraseña:</strong></label>
                                 <input type="text" id="clave" name="clave" value="contraseña">
                             </form>
                         </div>
@@ -192,9 +217,13 @@ button{
                 </div>
             </section>
         </section>
-        <section class="recuadro2"><div></div></section>
+        
        
         <button id="downloadButton">Descargar</button>
+        <section class="logo">
+            <p>WWW.INSPIREWORLDWIDE.COM</p>
+            <span></span>
+        </section>
     </main>
 
     <script>
